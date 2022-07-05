@@ -11,9 +11,7 @@
 		6E789C6C28740E3A0045289B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E789C6B28740E3A0045289B /* ContentView.swift */; };
 		6E789C6E28740E3A0045289B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E789C6D28740E3A0045289B /* Assets.xcassets */; };
 		6E789C7128740E3A0045289B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E789C7028740E3A0045289B /* Preview Assets.xcassets */; };
-		6E789C7B28740E3A0045289B /* PokeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E789C7A28740E3A0045289B /* PokeAppTests.swift */; };
-		6E789C8528740E3A0045289B /* PokeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E789C8428740E3A0045289B /* PokeAppUITests.swift */; };
-		6E789C8728740E3A0045289B /* PokeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E789C8628740E3A0045289B /* PokeAppUITestsLaunchTests.swift */; };
+		6EDDA8CB287436D200843CDB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6EDDA8CA287436D200843CDB /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +38,7 @@
 		6E789C6D28740E3A0045289B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E789C7028740E3A0045289B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E789C7628740E3A0045289B /* PokeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E789C7A28740E3A0045289B /* PokeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAppTests.swift; sourceTree = "<group>"; };
 		6E789C8028740E3A0045289B /* PokeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E789C8428740E3A0045289B /* PokeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAppUITests.swift; sourceTree = "<group>"; };
-		6E789C8628740E3A0045289B /* PokeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDDA8CB287436D200843CDB /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				6E789C6828740E3A0045289B /* PokeApp */,
-				6E789C7928740E3A0045289B /* PokeAppTests */,
-				6E789C8328740E3A0045289B /* PokeAppUITests */,
 				6E789C6728740E3A0045289B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,23 +104,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6E789C7928740E3A0045289B /* PokeAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				6E789C7A28740E3A0045289B /* PokeAppTests.swift */,
-			);
-			path = PokeAppTests;
-			sourceTree = "<group>";
-		};
-		6E789C8328740E3A0045289B /* PokeAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6E789C8428740E3A0045289B /* PokeAppUITests.swift */,
-				6E789C8628740E3A0045289B /* PokeAppUITestsLaunchTests.swift */,
-			);
-			path = PokeAppUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +120,9 @@
 			dependencies = (
 			);
 			name = PokeApp;
+			packageProductDependencies = (
+				6EDDA8CA287436D200843CDB /* ComposableArchitecture */,
+			);
 			productName = PokeApp;
 			productReference = 6E789C6628740E3A0045289B /* PokeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 6E789C5D28740E3A0045289B;
+			packageReferences = (
+				6EDDA8C9287436D200843CDB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 6E789C6728740E3A0045289B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E789C7B28740E3A0045289B /* PokeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E789C8528740E3A0045289B /* PokeAppUITests.swift in Sources */,
-				6E789C8728740E3A0045289B /* PokeAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +557,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6EDDA8C9287436D200843CDB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6EDDA8CA287436D200843CDB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EDDA8C9287436D200843CDB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E789C5E28740E3A0045289B /* Project object */;
 }
